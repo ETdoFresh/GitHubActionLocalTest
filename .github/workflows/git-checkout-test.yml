@@ -1,0 +1,10 @@
+name: Git Checkout Test
+on:
+    workflow_dispatch: {}
+jobs:
+    git-checkout-test:
+        name: Git Checkout Test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - run: ls -R

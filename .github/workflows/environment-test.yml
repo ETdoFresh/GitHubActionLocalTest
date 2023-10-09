@@ -1,0 +1,11 @@
+name: Environment Test
+on:
+    workflow_dispatch: {}
+jobs:
+    environment-test:
+        name: Environment Test
+        runs-on: ubuntu-latest
+        steps:
+            - name: Test Environment Variables
+              run: |
+                  echo "Hello ${{ env.FIRST_NAME }} ${{ env.LAST_NAME }}"
